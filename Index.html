@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="/images//favicon.ico" type="image/gif" sizes="16x16">
+    <title>Cocktails</title>
+</head>
+
+<body>
+   <nav>
+      <div><a href="Index.html"><img src="images/logo2.png"></a></div>
+       <ul>
+           <li><a href="Index.html">Home</a></li>
+           <li><a href="recipe.html">Recipe</a></li>        
+                             
+       </ul>
+   </nav>
+    <div class="wrapper">
+        <div class="news-item hero-item"></div>
+        <div class="news-item standard-item">
+        
+        </div>
+        <div class="news-item standard-item">
+        
+        </div>
+        <div class="news-item standard-item">
+        
+        </div>
+        <div class="news-item standard-item">
+        
+        </div>
+    </div>
+    
+    <div class="populatCocktailsHeading">Popular Cocktails</div>
+    
+   <div id="popularCocktails" ></div>
+   
+   
+   <div id="dialog" title="basic dialog">this is dialog</div>
+   
+   
+   
+<script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script src="main.js"></script>
+    <!--<script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+                var response = JSON.parse(xhttp.responseText);
+                console.log(response.cocktails[0].column0);
+                for(let i=0;i<12;i++){
+                    
+                    var random =Math.floor(Math.random() * 545); 
+                    const Content = $('<div class="Content">')
+                    const img = $('<img >')
+                    img.attr('src', response.cocktails[random].strDrinkThumb);
+                    console.log(response.cocktails[random].strDrinkThumb);
+                    Content.append(`<div class="name"> ${response.cocktails[random].strDrink}`);
+                    Content.append(img)
+
+                    $('#popularCocktails').append(Content);
+                }
+                
+            }
+        };
+        xhttp.open("GET", "cocktail.json", true);
+        xhttp.send();
+    </script>-->
+</body>
+
+</html>
